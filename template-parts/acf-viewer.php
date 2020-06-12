@@ -52,7 +52,7 @@ if($fields = get_field_objects()){
 							case "oembed":
 								// echo $field["value"];
 								// echo '<code>'.json_encode(get_field($field["name"],false,false),JSON_PRETTY_PRINT).'</code><br><br>';
-								echo '<video src="'.get_field($field["name"],false,false).'" uk-video controls playsinline></video>';
+								echo '<video src="'.get_field($field["name"],false,false).'" uk-video="automute: true" controls></video>';
 							break;
 							default:
 								echo $field["value"];
