@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin);
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-acf-display {
+  background-color: #000;
+  color: #fff;
+  padding: 2px; }
+
+.acf-display {
+  /*******************************
+             Reset
+*******************************/
+  /* Border-Box */
+  /* iPad Input Shadows */
+  /*******************************
+             Page
+*******************************/
+  /*******************************
+             Headers
+*******************************/
+  /*******************************
+             Text
+*******************************/
+  /*-------------------
+        Links
+--------------------*/
+  /*******************************
+         Scrollbars
+*******************************/
+  /* Force Simple Scrollbars */
+  /* Inverted UI */
+  /*******************************
+          Highlighting
+*******************************/
+  /* Site */
+  /* Form */ }
+  .acf-display *,
+  .acf-display *:before,
+  .acf-display *:after {
+    box-sizing: inherit; }
+  .acf-display html {
+    box-sizing: border-box; }
+  .acf-display input[type="text"],
+  .acf-display input[type="email"],
+  .acf-display input[type="search"],
+  .acf-display input[type="password"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* mobile firefox too! */ }
+  .acf-display html,
+  .acf-display body {
+    height: 100%; }
+  .acf-display html {
+    font-size: 14px; }
+  .acf-display body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-width: 320px;
+    background: #ffffff;
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.4285em;
+    color: rgba(0, 0, 0, 0.87); }
+  .acf-display h1,
+  .acf-display h2,
+  .acf-display h3,
+  .acf-display h4,
+  .acf-display h5 {
+    font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    line-height: 1.28571em;
+    margin: calc(2rem - 0.14286em) 0 1rem;
+    font-weight: bold;
+    padding: 0; }
+  .acf-display h1 {
+    min-height: 1rem;
+    font-size: 2rem; }
+  .acf-display h2 {
+    font-size: 1.71429rem; }
+  .acf-display h3 {
+    font-size: 1.28571rem; }
+  .acf-display h4 {
+    font-size: 1.07143rem; }
+  .acf-display h5 {
+    font-size: 1rem; }
+  .acf-display h1:first-child,
+  .acf-display h2:first-child,
+  .acf-display h3:first-child,
+  .acf-display h4:first-child,
+  .acf-display h5:first-child {
+    margin-top: 0; }
+  .acf-display h1:last-child,
+  .acf-display h2:last-child,
+  .acf-display h3:last-child,
+  .acf-display h4:last-child,
+  .acf-display h5:last-child {
+    margin-bottom: 0; }
+  .acf-display p {
+    margin: 0 0 1em;
+    line-height: 1.4285em; }
+  .acf-display p:first-child {
+    margin-top: 0; }
+  .acf-display p:last-child {
+    margin-bottom: 0; }
+  .acf-display a {
+    color: #4183c4;
+    text-decoration: none; }
+  .acf-display a:hover {
+    color: #195d9f;
+    text-decoration: none; }
+  .acf-display body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+    height: 5px; }
+  .acf-display body ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0; }
+  .acf-display body ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-transition: color 0.2s ease;
+    transition: color 0.2s ease; }
+  .acf-display body ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.15); }
+  .acf-display body ::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 135, 139, 0.8); }
+  .acf-display body .ui.inverted:not(.dimmer)::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); }
+  .acf-display body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25); }
+  .acf-display body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255, 255, 255, 0.15); }
+  .acf-display body .ui.inverted:not(.dimmer)::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35); }
+  .acf-display ::-webkit-selection {
+    background-color: #cce2ff;
+    color: rgba(0, 0, 0, 0.87); }
+  .acf-display ::-moz-selection {
+    background-color: #cce2ff;
+    color: rgba(0, 0, 0, 0.87); }
+  .acf-display ::selection {
+    background-color: #cce2ff;
+    color: rgba(0, 0, 0, 0.87); }
+  .acf-display textarea::-webkit-selection,
+  .acf-display input::-webkit-selection {
+    background-color: rgba(100, 100, 100, 0.4);
+    color: rgba(0, 0, 0, 0.87); }
+  .acf-display textarea::-moz-selection,
+  .acf-display input::-moz-selection {
+    background-color: rgba(100, 100, 100, 0.4);
+    color: rgba(0, 0, 0, 0.87); }
+  .acf-display textarea::-moz-selection, .acf-display input::-moz-selection {
+    background-color: rgba(100, 100, 100, 0.4);
+    color: rgba(0, 0, 0, 0.87); }
+  .acf-display textarea::selection,
+  .acf-display input::selection {
+    background-color: rgba(100, 100, 100, 0.4);
+    color: rgba(0, 0, 0, 0.87); }
+
+
+/*# sourceMappingURL=style.css.map*/
