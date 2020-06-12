@@ -7,6 +7,8 @@ Stable tag:        0.1.1
 Requires PHP:      7.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+GitHub Plugin URI: zzozz/acf-display
+GitHub Plugin URI: https://github.com/zzozz/acf-display
 
 Example block written with ESNext standard and JSX support – build step required.
 

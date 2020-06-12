@@ -8,6 +8,7 @@
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     create-block
  * GitHub Plugin URI: zzozz/acf-display
+ * GitHub Plugin URI: https://github.com/zzozz/acf-display
  *
  * @package         create-block
  */
