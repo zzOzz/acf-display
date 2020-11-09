@@ -54,6 +54,13 @@ if($fields = get_field_objects()){
 								// echo '<code>'.json_encode(get_field($field["name"],false,false),JSON_PRETTY_PRINT).'</code><br><br>';
 								echo '<video src="'.get_field($field["name"],false,false).'" uk-video="automute: true" controls></video>';
 							break;
+							case "link":
+								$link = $field["value"];
+								$link_url = $link['url'];
+								$link_title = $link['title'];
+								$link_target = $link['target'] ? $link['target'] : '_self';
+								echo '<a href="'.esc_url($link_url).'" target="'.esc_attr($link_target).'" >'.esc_html($link_title).'</a>';
+							break;
 							default:
 								echo $field["value"];
 							break;
