@@ -56,10 +56,10 @@ if($fields = get_field_objects()){
 			<?php
 			foreach($fields as $field){
 				?>
-				<dt class='term'>
+				<dt class='term <?php echo $field["class"];?>'>
 					<b><?php echo $field["label"];?></b>
 				</dt>
-				<dd class="value">
+				<dd class="value <?php echo $field["class"];?>">
 					<?php 
 						switch ($field["type"]) {
 							case "oembed":
