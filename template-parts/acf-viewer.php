@@ -28,8 +28,18 @@ if($fields = get_field_objects()){
 	foreach(acf_get_field_groups(array('post_type' => get_post_type())) as $field_group){
 		// echo '<code>'.json_encode(acf_get_fields($field_group["ID"])[0],JSON_PRETTY_PRINT).'</code>';
 	}
+
+	if(! empty(get_the_post_thumbnail_url())) {
+		$uk_class = "uk-width-2-3@s";
+	} else {
+		$uk_class = "uk-width-1-1@s";
+	}
 ?>
 <div class="uk-card uk-card-default uk-grid-collapse uk-margin" uk-grid>
+	<?php
+	if(! empty(get_the_post_thumbnail_url())) 
+	{
+	?>
 	<div class="uk-width-1-3@s uk-card-media-left uk-cover-container" uk-lightbox>
 		<a href="<?php echo get_the_post_thumbnail_url()?>">
 		<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="<?php echo get_the_post_thumbnail_url()?>" uk-cover uk-img>
@@ -38,7 +48,10 @@ if($fields = get_field_objects()){
 		</a>
 		<canvas width="600" height="400"></canvas>
 	</div>
-	<div class="uk-width-2-3@s uk-card-body">
+	<?php
+	}
+	?>
+	<div class="<?php echo $uk_class?> uk-card-body">
 		<dl class="uk-description-list uk-description-list-divider">
 			<?php
 			foreach($fields as $field){

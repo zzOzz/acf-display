@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     Acf Display
  * Description:     Example block written with ESNext standard and JSX support – build step required.
- * Version:         0.1.5
+ * Version:         0.1.6
  * Author:          The WordPress Contributors
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
