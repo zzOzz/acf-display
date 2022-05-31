@@ -69,10 +69,12 @@ if($fields = get_field_objects()){
 							break;
 							case "link":
 								$link = $field["value"];
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								echo '<a href="'.esc_url($link_url).'" target="'.esc_attr($link_target).'" >'.esc_html($link_title).'</a>';
+								if(is_array($link)) {
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									$link_target = $link['target'] ? $link['target'] : '_self';
+									echo '<a href="'.esc_url($link_url).'" target="'.esc_attr($link_target).'" >'.esc_html($link_title).'</a>';
+								}
 							break;
 							default:
 								echo $field["value"];
