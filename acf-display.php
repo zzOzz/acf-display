@@ -15,7 +15,7 @@
 
 
 function register_acf_block_types_for_acf_display() {
-	// echo '<code>'.json_encode(acf_get_field_groups(),JSON_PRETTY_PRINT).'</code><br><br>';
+
 	foreach(acf_get_field_groups() as $_field_group) {
 		// register a testimonial block.
 		acf_register_block_type(array(
@@ -48,37 +48,5 @@ function register_acf_block_types_for_acf_display() {
 	);
 }
 
-// Check if function exists and hook into setup.
-// if( function_exists('acf_register_block_type') ) {
 	add_action('acf/init', 'register_acf_block_types_for_acf_display');
 	
-// } else {
-	// echo 'fuckok';
-// }
-
-
-add_action(
-	'rest_api_init',
-	function () {
-
-		if ( ! function_exists( 'use_block_editor_for_post_type' ) ) {
-			require ABSPATH . 'wp-admin/includes/post.php';
-		}
-
-		// Surface all Gutenberg blocks in the WordPress REST API
-		$post_types = get_post_types_by_support( [ 'editor' ] );
-		foreach ( $post_types as $post_type ) {
-			if ( use_block_editor_for_post_type( $post_type ) ) {
-				register_rest_field(
-					$post_type,
-					'blocks',
-					[
-						'get_callback' => function ( array $post ) {
-							return parse_blocks( $post['content']['raw'] );
-						},
-					]
-				);
-			}
-		}
-	}
-);
