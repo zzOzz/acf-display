@@ -13,55 +13,6 @@
  * @package         create-block
  */
 
-/**
- * Registers all block assets so that they can be enqueued through the block editor
- * in the corresponding context.
- *
- * @see https://developer.wordpress.org/block-editor/tutorials/block-tutorial/applying-styles-with-stylesheets/
- */
-function create_block_acf_display_block_init() {
-	$dir = dirname( __FILE__ );
-
-	$script_asset_path = "$dir/build/index.asset.php";
-	if ( ! file_exists( $script_asset_path ) ) {
-		throw new Error(
-			'You need to run `npm start` or `npm run build` for the "create-block/acf-display" block first.'
-		);
-	}
-	$index_js     = 'build/index.js';
-	$script_asset = require( $script_asset_path );
-	wp_register_script(
-		'create-block-acf-display-block-editor',
-		plugins_url( $index_js, __FILE__ ),
-		$script_asset['dependencies'],
-		$script_asset['version']
-	);
-
-	$editor_css = 'editor.css';
-	wp_register_style(
-		'create-block-acf-display-block-editor',
-		plugins_url( $editor_css, __FILE__ ),
-		array(),
-		filemtime( "$dir/$editor_css" )
-	);
-
-	$style_css = 'style.css';
-	wp_register_style(
-		'create-block-acf-display-block',
-		plugins_url( $style_css, __FILE__ ),
-		array(),
-		filemtime( "$dir/$style_css" )
-	);
-
-	register_block_type( 'create-block/acf-display', array(
-		'editor_script' => 'create-block-acf-display-block-editor',
-		'editor_style'  => 'create-block-acf-display-block-editor',
-		'style'         => 'create-block-acf-display-block',
-	) );
-}
-
-// add_action( 'init', 'create_block_acf_display_block_init' );
-
 
 function register_acf_block_types_for_acf_display() {
 	// echo '<code>'.json_encode(acf_get_field_groups(),JSON_PRETTY_PRINT).'</code><br><br>';
@@ -96,19 +47,6 @@ function register_acf_block_types_for_acf_display() {
 		array()
 	);
 }
-
-// wp_enqueue_style(
-//     'materialize_css',
-//     'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css',
-//     array()
-// );
-
-// wp_enqueue_script(
-//     'materialize_js',
-//     'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js',
-//     array()
-// );
-
 
 // Check if function exists and hook into setup.
 // if( function_exists('acf_register_block_type') ) {
